@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 .env*
 .adaption_key
+data/.cache/*.json
+!data/.cache/geocode.json
