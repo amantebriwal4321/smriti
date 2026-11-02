@@ -32,7 +32,7 @@ function ItemView({ it, monById, onMon }: { it: Item; monById: Map<string, Monum
         <h2 className="font-serif text-2xl leading-tight">{a.title || it.orig_title}</h2>
         <div className="flex flex-wrap gap-1.5 text-xs">
           {[a.language, a.script, a.era || a.author_era, a.style].filter(Boolean).map((x: string) => <span key={x} className="px-2 py-0.5 rounded-full bg-ink3 text-muted">{x}</span>)}
-          {typeof a.confidence === "number" && <span className="px-2 py-0.5 rounded-full bg-ink3" style={{ color: a.confidence > 0.6 ? "#4fb3a9" : "#e8a33d" }}>OCR confidence {Math.round(a.confidence * 100)}%</span>}
+          {typeof a.confidence === "number" && <span className="px-2 py-0.5 rounded-full bg-ink3" style={{ color: a.confidence > 0.6 ? "#4fb3a9" : "#e8a33d" }}>{it.kind === "photo" ? "ID" : "OCR"} confidence {Math.round(a.confidence * 100)}%</span>}
         </div>
         {a.summary && <p className="text-sm text-parch/90">{a.summary}</p>}
         {tabs.length > 0 && (

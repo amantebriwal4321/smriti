@@ -103,7 +103,7 @@ for i, it in enumerate(manifest):
     hint = it.get("monument_id") or next((v for k, v in ALIASES.items() if any(k in norm(n) for n in names + [ai.get("title") or ""])), None)
     rec["links"] = [{"id": k, "score": v} for k, v in link(names, hint)]
     if not rec["links"]:
-        for q in [n for n in names if n] + [ai.get("city") or ""]:
+        for q in [n for n in names if n] + [ai.get("city") or "", f"{ai.get('monument') or ''} {ai.get('state') or ''}".strip()]:
             g = q and geocode(q)
             if g: rec["geo"] = {**g, "query": q}; break
     items.append(rec)
