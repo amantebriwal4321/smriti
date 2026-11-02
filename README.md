@@ -32,9 +32,9 @@ flowchart LR
   subgraph App["Next.js on Vercel"]
     F --> H[BM25 index<br/>lib/search.ts]
     G --> H
-    H --> I[/api/search]
-    H --> J[/api/ask<br/>RAG + citations]
-    K[/api/ingest<br/>live upload] --> C2[Gemini vision] --> D2[linker + geocode]
+    H --> I["/api/search"]
+    H --> J["/api/ask<br/>RAG + citations"]
+    K["/api/ingest<br/>live upload"] --> C2[Gemini vision] --> D2[linker + geocode]
     I & J & D2 --> UI[Map-first UI<br/>Leaflet + OSM]
   end
 ```
