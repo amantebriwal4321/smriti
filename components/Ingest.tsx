@@ -5,7 +5,7 @@ import type { Item } from "@/lib/types";
 const STAGES = ["Upload", "OCR", "Translate", "Extract places", "Link + map"];
 const SAMPLES = [
   { label: "Devanagari book cover, 1925", url: "/archive/scan_Mudrarakshas_Bharatendu_Harishchandra_1925_djvu_org.jpg" },
-  { label: "Old Kannada memorial stone", url: "/archive/scan_Atakur_memorial_stone_with_inscription_in_old_Kann_896251_jp.jpg" },
+  { label: "Old Kannada temple inscription", url: "/archive/scan_11th_12th_century_Iswara_temple_Kamaleshwara_Kalleswara_Kaml.jpg" },
   { label: "Ramayana folio, Devanagari", url: "/archive/scan_Folio_from_a_Ramayana_manuscript_text_in_Devanagar_909855_jp.jpg" },
 ];
 
