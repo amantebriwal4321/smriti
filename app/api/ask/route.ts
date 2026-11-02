@@ -1,3 +1,4 @@
+export const maxDuration = 120;
 import { search } from "@/lib/search";
 import { gemini } from "@/lib/gemini";
 

@@ -2,7 +2,7 @@ import { gemini } from "@/lib/gemini";
 import { linkPlaces } from "@/lib/link";
 import { monById } from "@/lib/data";
 
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 const PROMPT = `You are an archivist. The input is a heritage archive item from India: a scanned document (Hindi, Sanskrit, Devanagari, Kannada, Old Kannada, or other Indic script), a monument photo, or travel journal text.
 Return JSON only with keys:
